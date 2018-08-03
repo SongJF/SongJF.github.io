@@ -1,5 +1,6 @@
 ---
 title: test
 date: 2018-08-03 16:13:11
-tags:
+tags: test
+categories: test
 ---
