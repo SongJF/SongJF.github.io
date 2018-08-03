@@ -38,7 +38,7 @@ fb_app_id:
 # GalMenu - PC端右键调出，移动端长按
 # galmenu决定是否开启
 # mp3play决定是否开启音效
-galmenu: true
+galmenu: false
 mp3play: false
 gaymenu_item:
 - name: 首页
@@ -56,13 +56,14 @@ gaymenu_item:
 
 # 社交链接
 social:
-- url: http://github.com/ShanaMaid
+- url: http://github.com/SongJF
   name: Github
 
 # 友情链接
 # name : url
 link_title: 友情链接
 links:
+  PFStudio: https://github.com/orgs/pfstudio
   ShanaMaid: http://blog.shanamaid.top/
 
 
@@ -70,7 +71,7 @@ links:
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
 # 头像
-avatar: https://avatars0.githubusercontent.com/u/20333903?v=3&s=460
+avatar: /imgs/avatar.png
 
 
 # 网站统计
