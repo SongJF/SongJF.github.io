@@ -26,8 +26,8 @@
   
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/plugin/bganimation/bg.css">
+  <link rel="stylesheet" href="/Note/css/style.css">
+  <link rel="stylesheet" href="/Note/plugin/bganimation/bg.css">
   
 
 </head>
@@ -71,7 +71,7 @@
 
         <section id="main"><article id="post-在WPF中使用Material_Design" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/08/03/在WPF中使用Material_Design/#more" class="article-date">
+    <a href="/Note/2018/08/03/在WPF中使用Material_Design/#more" class="article-date">
   <time class="post-time" datetime="2018-08-03T08:13:11.000Z" itemprop="datePublished">
     <span class="post-month">8月</span><br/>
     <span class="post-day">03</span>
@@ -93,7 +93,7 @@
         <div>
           
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Windos桌面应用/">Windos桌面应用</a>
+    <a class="article-category-link" href="/Note/categories/Windos桌面应用/">Windos桌面应用</a>
   </div>
 
           
@@ -141,10 +141,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.songjf.top/Note/2018/08/03/在WPF中使用Material_Design/#more" data-id="cjkf6bxf50000y0cf6r4gox6o" class="article-share-link">分享</a>
+      <a data-url="http://blog.songjf.top/Note/2018/08/03/在WPF中使用Material_Design/#more" data-id="cjkf6e3nb00000ocfg4oc7kcd" class="article-share-link">分享</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/WPF/">WPF</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Note/tags/WPF/">WPF</a></li></ul>
 
     </footer>
   </div>
@@ -246,8 +246,8 @@ new WOW().init();
 </script>   
 
 
-  <link rel="stylesheet" href="/plugin/fancybox/jquery.fancybox.css">
-  <script src="/plugin/fancybox/jquery.fancybox.pack.js"></script>
+  <link rel="stylesheet" href="/Note/plugin/fancybox/jquery.fancybox.css">
+  <script src="/Note/plugin/fancybox/jquery.fancybox.pack.js"></script>
 
 
 
@@ -261,7 +261,7 @@ new WOW().init();
     <li><span>趋避之</span></li> 
   </ul>
 </section>
-<script src="/js/script.js"></script>
+<script src="/Note/js/script.js"></script>
 
 
 
