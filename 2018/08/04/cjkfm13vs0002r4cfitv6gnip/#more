@@ -9,7 +9,7 @@
 <meta name="keywords" content="工具,小技巧">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Screen使用笔记">
-<meta property="og:url" content="http://blog.songjf.top/2018/08/04/cjkfbfksa000280cf5gwrszgq/#more">
+<meta property="og:url" content="http://blog.songjf.top/2018/08/04/cjkfm13vs0002r4cfitv6gnip/#more">
 <meta property="og:site_name" content="Song&#39;s Note">
 <meta property="og:description" content="新建session—&amp;gt;screen -S &amp;lt;Session名称&amp;gt; 展示所有session—&amp;gt;screen -ls 重连session—&amp;gt;screen -r &amp;lt;Session名称&amp;gt;(或ID) 从session中断连—&amp;gt;C-a d  (C-a即ctrl+a) 释放某个session（杀死）—&amp;gt;ctrl+d（在此session中） —&amp;gt;scre">
 <meta property="og:locale" content="zh-CN">
@@ -71,7 +71,7 @@
 
         <section id="main"><article id="post-Screen使用笔记" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/08/04/cjkfbfksa000280cf5gwrszgq/#more" class="article-date">
+    <a href="/2018/08/04/cjkfm13vs0002r4cfitv6gnip/#more" class="article-date">
   <time class="post-time" datetime="2018-08-04T11:07:22.000Z" itemprop="datePublished">
     <span class="post-month">8月</span><br/>
     <span class="post-day">04</span>
@@ -115,7 +115,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.songjf.top/2018/08/04/cjkfbfksa000280cf5gwrszgq/#more" data-id="cjkfbfksa000280cf5gwrszgq" class="article-share-link">分享</a>
+      <a data-url="http://blog.songjf.top/2018/08/04/cjkfm13vs0002r4cfitv6gnip/#more" data-id="cjkfm13vs0002r4cfitv6gnip" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小技巧/">小技巧</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
@@ -127,7 +127,7 @@
 <nav id="article-nav">
   
   
-    <a href="/2018/08/03/cjkfbfks4000080cf2f2jzxsr/#more" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/08/03/cjkfm13vm0000r4cfi2rrpef5/#more" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">下一篇</strong>
       <div class="article-nav-title">在WPF中使用Material Design和MahApps</div>
     </a>
