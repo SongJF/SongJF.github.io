@@ -13,9 +13,9 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://blog.songjf.top
+url: https://songjf.github.io/
 root: /
-permalink: :year/:month/:day/:id/#more
+permalink: :year/:month/:day/:id/
 permalink_defaults:
 
 # Directory
@@ -79,5 +79,5 @@ theme: shana
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:SongJF/Note.git
+  repo: git@github.com:SongJF/SongJF.github.io.git
   branch: master
