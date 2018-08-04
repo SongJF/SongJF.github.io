@@ -70,7 +70,7 @@ links:
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
 # 头像
-avatar: /note/imgs/avatar.png
+avatar: /imgs/avatar.png
 
 
 # 网站统计

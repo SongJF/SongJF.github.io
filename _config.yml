@@ -14,8 +14,8 @@ timezone:
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://blog.songjf.top
-root: /note
-permalink: :year/:month/:day/:title/#more
+root: /
+permalink: :year/:month/:day/:id/#more
 permalink_defaults:
 
 # Directory
