@@ -9,16 +9,16 @@
 <meta name="keywords" content="WPF">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在WPF中使用Material Design和MahApps">
-<meta property="og:url" content="http://blog.songjf.top/Note/2018/08/03/在WPF中使用Material_Design/#more">
+<meta property="og:url" content="http://blog.songjf.top/2018/08/03/cjkfbfks4000080cf2f2jzxsr/#more">
 <meta property="og:site_name" content="Song&#39;s Note">
 <meta property="og:description" content="引入包 在包管理工具中引入MaterialDesign和MahApps.Metro">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-03T14:12:22.347Z">
+<meta property="og:updated_time" content="2018-08-04T09:59:28.737Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在WPF中使用Material Design和MahApps">
 <meta name="twitter:description" content="引入包 在包管理工具中引入MaterialDesign和MahApps.Metro">
   
-    <link rel="alternate" href="/Note/atom.xml" title="Song&#39;s Note" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="Song&#39;s Note" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -26,8 +26,8 @@
   
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
-  <link rel="stylesheet" href="/Note/css/style.css">
-  <link rel="stylesheet" href="/Note/plugin/bganimation/bg.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/plugin/bganimation/bg.css">
   
 
 </head>
@@ -43,25 +43,25 @@
     <h2 class="author">SongJF</h2>
     <h3 class="description"></h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>1</strong><br>文章</div></a>
-      <a href="/categories"><div><strong>1</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>1</strong><br>标签</div></a>
+      <a href="/archives"><div><strong>2</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>2</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>3</strong><br>标签</div></a>
     </div>
     <ul class="blog-link">
      
-          <a href="/Note" title="Home">
+          <a href="/" title="Home">
             <li>主页</li>
           </a>
         
-          <a href="/Note/archives" title="Archives">
+          <a href="/archives" title="Archives">
             <li>归档</li>
           </a>
         
-          <a href="/Note/categories" title="Categories">
+          <a href="/categories" title="Categories">
             <li>分类</li>
           </a>
         
-          <a href="/Note/tags" title="Tags">
+          <a href="/tags" title="Tags">
             <li>标签</li>
           </a>
         
@@ -71,7 +71,7 @@
 
         <section id="main"><article id="post-在WPF中使用Material_Design" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/Note/2018/08/03/在WPF中使用Material_Design/#more" class="article-date">
+    <a href="/2018/08/03/cjkfbfks4000080cf2f2jzxsr/#more" class="article-date">
   <time class="post-time" datetime="2018-08-03T08:13:11.000Z" itemprop="datePublished">
     <span class="post-month">8月</span><br/>
     <span class="post-day">03</span>
@@ -93,7 +93,7 @@
         <div>
           
   <div class="article-category">
-    <a class="article-category-link" href="/Note/categories/Windos桌面应用/">Windos桌面应用</a>
+    <a class="article-category-link" href="/categories/Windos桌面应用/">Windos桌面应用</a>
   </div>
 
           
@@ -141,15 +141,29 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.songjf.top/Note/2018/08/03/在WPF中使用Material_Design/#more" data-id="cjkf6e3nb00000ocfg4oc7kcd" class="article-share-link">分享</a>
+      <a data-url="http://blog.songjf.top/2018/08/03/cjkfbfks4000080cf2f2jzxsr/#more" data-id="cjkfbfks4000080cf2f2jzxsr" class="article-share-link">分享</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Note/tags/WPF/">WPF</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/WPF/">WPF</a></li></ul>
 
     </footer>
   </div>
   
     
+<nav id="article-nav">
+  
+    <a href="/2018/08/04/cjkfbfksa000280cf5gwrszgq/#more" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          Screen使用笔记
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
   
 </article>
 
@@ -166,19 +180,19 @@
     <h2 class="blog-subtitle">SongJF的人博客</h2>
     <ul class="blog-link">
      
-          <a href="/Note" title="Home">
+          <a href="/" title="Home">
             <li>主页</li>
           </a>
         
-          <a href="/Note/archives" title="Archives">
+          <a href="/archives" title="Archives">
             <li>归档</li>
           </a>
         
-          <a href="/Note/categories" title="Categories">
+          <a href="/categories" title="Categories">
             <li>分类</li>
           </a>
         
-          <a href="/Note/tags" title="Tags">
+          <a href="/tags" title="Tags">
             <li>标签</li>
           </a>
         
@@ -194,9 +208,9 @@
     <h2 class="author">SongJF</h2>
     <h3 class="description"></h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>1</strong><br>文章</div></a>
-      <a href="/categories"><div><strong>1</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>1</strong><br>标签</div></a>
+      <a href="/archives"><div><strong>2</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>2</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>3</strong><br>标签</div></a>
     </div>
 
 
@@ -246,8 +260,8 @@ new WOW().init();
 </script>   
 
 
-  <link rel="stylesheet" href="/Note/plugin/fancybox/jquery.fancybox.css">
-  <script src="/Note/plugin/fancybox/jquery.fancybox.pack.js"></script>
+  <link rel="stylesheet" href="/plugin/fancybox/jquery.fancybox.css">
+  <script src="/plugin/fancybox/jquery.fancybox.pack.js"></script>
 
 
 
@@ -261,7 +275,7 @@ new WOW().init();
     <li><span>趋避之</span></li> 
   </ul>
 </section>
-<script src="/Note/js/script.js"></script>
+<script src="/js/script.js"></script>
 
 
 
