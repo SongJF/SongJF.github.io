@@ -1,37 +1,18 @@
 ---
-title: 在WPF中使用Material Design和MahApps
+title: 在WPF中使用Material Design
 date: 2018-08-03 16:13:11
 author: SongJF
 tags: WPF
 categories: Windos桌面应用
 ---
 
-## 引入包
-
- 在包管理工具中引入`MaterialDesign`和`MahApps.Metro`
+由于WPF自带样式太过233了，我们希望有更好看的UI框架，所以我们这里采用Material Design这个框架
 
 <!--more-->
 
-## 引用
+## 引入包
 
-- App.xaml
-
-    在`<Application.Resources>`中添加
-
-    ``` xaml
-    <ResourceDictionary>
-        <ResourceDictionary.MergedDictionaries>
-          <!--設定主題背景色-->
-          <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Dark.xaml" />
-          <!--套用基本控制項樣式-->
-          <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
-          <!--設定主色-->
-          <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Red.xaml" />
-          <!--設定輔色-->
-          <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Red.xaml" />
-        </ResourceDictionary.MergedDictionaries>
-    </ResourceDictionary>
-    ```
+ 在包管理工具中引入`MaterialDesignColors`和`MaterialDesignThemes`
 
 
 ## 引用主题颜色
@@ -57,9 +38,19 @@ categories: Windos桌面应用
     </ResourceDictionary>
   ```
 
+  另一种配色方案
+
+    ``` xaml
+    <!-- Material Design -->
+    <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Dark.xaml" />
+    <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+    <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.bluegrey.xaml" />
+    <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.DeepPurPle.xaml" />
+    ```
+
 - 在`MainPage.xaml`中应用如下更改
 
-  添加TextElement.Foreground 和 Background属性的具体内容
+  添加 `TextElement.Foreground` 和 `Background` 属性的具体内容
 
   修改后代码如下
 
@@ -83,26 +74,6 @@ categories: Windos桌面应用
 
 - 修改`APP.xaml`中的对应内容
 
-  添加`MahApps`相关资源和笔刷
-
-  - 在`<ResourceDictionary.MergedDictionaries>`添加相关资源
-
-    ``` xaml
-    <!--MahApps-->
-    <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
-    <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
-    <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
-    <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
-    ```
-
-    ``` xaml
-    <!-- Material Design -->
-    <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Dark.xaml" />
-    <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
-    <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.bluegrey.xaml" />
-    <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.DeepPurPle.xaml" />
-    ```
-
   - 在`<ResourceDictionary>`添加笔刷资源
 
     ``` xaml
@@ -123,3 +94,9 @@ categories: Windos桌面应用
     <SolidColorBrush x:Key="IdealForegroundColorBrush" Color="{DynamicResource Primary500Foreground}" />
     <SolidColorBrush x:Key="IdealForegroundDisabledBrush" Color="{DynamicResource Primary500}" Opacity="0.4" />
     ```
+
+  - 设置 `Windos` 属性 `WindowStyle` 为 `None`
+
+
+
+参考资料:[透過 MATERIAL DESIGN XAML TOOLKIT 讓你的 WPF 應用程式潮又有料]("http://ouch1978.github.io/2017/03/25/material-design-xaml-toolkit/")
