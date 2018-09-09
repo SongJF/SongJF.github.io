@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>MaterialDesign使用心得 | Song&#39;s Note</title>
+  <title>WPF小技巧 | Song&#39;s Note</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="由于MaterialDesign的丰富特性加之其并没有多少中文说明文档所以我只好摸着官方Demo一步一步慢慢踩坑了">
-<meta name="keywords" content="WPF,小技巧">
+  <meta name="description" content="使用数据绑定 理解 数据绑定就是把两个元素、对象等的某个属性连接在一起，一变俱变，保持同步  使用 将文本框的内容绑定至滑动条上  xaml 12&amp;lt;TextBox Height=&amp;quot;20&amp;quot; Margin=&amp;quot;0,0,10,87&amp;quot; Text=&amp;quot;&amp;#123;Binding ElementName=slider1,Path=Value&amp;#125;&amp;qu">
+<meta name="keywords" content="小技巧,WPF">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MaterialDesign使用心得">
-<meta property="og:url" content="https://songjf.github.io/2018/08/07/cjkiis7iw0000escfm1y4q2md/index.html">
+<meta property="og:title" content="WPF小技巧">
+<meta property="og:url" content="https://songjf.github.io/2018/08/05/cjlugzglg000tqocfryknh958/index.html">
 <meta property="og:site_name" content="Song&#39;s Note">
-<meta property="og:description" content="由于MaterialDesign的丰富特性加之其并没有多少中文说明文档所以我只好摸着官方Demo一步一步慢慢踩坑了">
+<meta property="og:description" content="使用数据绑定 理解 数据绑定就是把两个元素、对象等的某个属性连接在一起，一变俱变，保持同步  使用 将文本框的内容绑定至滑动条上  xaml 12&amp;lt;TextBox Height=&amp;quot;20&amp;quot; Margin=&amp;quot;0,0,10,87&amp;quot; Text=&amp;quot;&amp;#123;Binding ElementName=slider1,Path=Value&amp;#125;&amp;qu">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-06T16:57:56.783Z">
+<meta property="og:updated_time" content="2018-08-09T16:55:17.022Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MaterialDesign使用心得">
-<meta name="twitter:description" content="由于MaterialDesign的丰富特性加之其并没有多少中文说明文档所以我只好摸着官方Demo一步一步慢慢踩坑了">
+<meta name="twitter:title" content="WPF小技巧">
+<meta name="twitter:description" content="使用数据绑定 理解 数据绑定就是把两个元素、对象等的某个属性连接在一起，一变俱变，保持同步  使用 将文本框的内容绑定至滑动条上  xaml 12&amp;lt;TextBox Height=&amp;quot;20&amp;quot; Margin=&amp;quot;0,0,10,87&amp;quot; Text=&amp;quot;&amp;#123;Binding ElementName=slider1,Path=Value&amp;#125;&amp;qu">
   
     <link rel="alternate" href="/atom.xml" title="Song&#39;s Note" type="application/atom+xml">
   
@@ -43,9 +43,9 @@
     <h2 class="author">SongJF</h2>
     <h3 class="description"></h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>4</strong><br>文章</div></a>
-      <a href="/categories"><div><strong>2</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>3</strong><br>标签</div></a>
+      <a href="/archives"><div><strong>6</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>4</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>4</strong><br>标签</div></a>
     </div>
     <ul class="blog-link">
      
@@ -69,12 +69,12 @@
   </div>
 </div>
 
-        <section id="main"><article id="post-MaterialDesign使用心得" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-WPF小技巧" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/08/07/cjkiis7iw0000escfm1y4q2md/" class="article-date">
-  <time class="post-time" datetime="2018-08-06T16:28:21.000Z" itemprop="datePublished">
+    <a href="/2018/08/05/cjlugzglg000tqocfryknh958/" class="article-date">
+  <time class="post-time" datetime="2018-08-05T05:24:43.000Z" itemprop="datePublished">
     <span class="post-month">8月</span><br/>
-    <span class="post-day">07</span>
+    <span class="post-day">05</span>
   </time>
 </a>
    
@@ -86,7 +86,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      MaterialDesign使用心得
+      WPF小技巧
     </h1>
   
 
@@ -105,35 +105,49 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>由于<code>MaterialDesign</code>的丰富特性加之其并没有多少中文说明文档所以我只好摸着官方Demo一步一步慢慢踩坑了</p>
-<a id="more"></a>
-<h2 id="双选的Dialog"><a href="#双选的Dialog" class="headerlink" title="双选的Dialog"></a>双选的Dialog</h2><ul>
-<li><p>Dialog外套 <code>&lt;materialDesign:DialogHost HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot; DialogClosing=&quot;DialogHost_DialogClosing&quot;/&gt;</code></p>
-<p>其中 <code>DialogClosing</code> 处理对话框关闭后的事务</p>
+        <h2 id="使用数据绑定"><a href="#使用数据绑定" class="headerlink" title="使用数据绑定"></a>使用数据绑定</h2><ul>
+<li><p>理解</p>
+<p>数据绑定就是把两个元素、对象等的某个属性连接在一起，一变俱变，保持同步</p>
 </li>
-<li><p>Dialog内容 <code>&lt;materialDesign:DialogHost.DialogContent&gt;</code></p>
-<p>在里面赛一个<code>&lt;StackPanel&gt;</code>或者其他什么框架然后就可以随便填充内容了</p>
-</li>
-<li><p>消息传递(在<code>DialogClosing</code>中获取信息)</p>
+<li><p>使用 将文本框的内容绑定至滑动条上</p>
 <ul>
-<li><p>通过<code>x:Name</code>在xaml绑定控件再在逻辑层获取信息</p>
+<li><p>xaml</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;TextBox Height=&quot;20&quot; Margin=&quot;0,0,10,87&quot; Text=&quot;&#123;Binding ElementName=slider1,Path=Value&#125;&quot; BorderThickness=&quot;1&quot;/&gt;</span><br><span class="line">&lt;Slider Maximum=&quot;100&quot; Margin=&quot;0,50,0,35&quot; Name=&quot;slider1&quot;/&gt;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>在主窗口引用名称空间<code>xmlns:system=&quot;clr-namespace:System;assembly=mscorlib&quot;</code></p>
+<li><p>cs</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.textbox1.SetBinding(TextBox.TextProperty, <span class="keyword">new</span> Binding(<span class="string">"Value"</span>) &#123; ElementName = slider1.Name,Mode=BindingMode.TwoWay&#125;);</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;Button.CommandParameter&gt;</span><br><span class="line">    &lt;system:Boolean&gt;True&lt;/system:Boolean&gt;</span><br><span class="line">&lt;/Button.CommandParameter&gt;</span><br></pre></td></tr></table></figure>
-<p>然后通过<code>DialogClosing</code>对应方法的参数<code>eventArgs</code>获取信息 如上例在逻辑层中通过<code>eventArgs.Parameter</code>获得按钮点击状态</p>
 </li>
-<li><p>关闭Dialog</p>
-<p>通过为控件添加<code>Command=&quot;materialDesign:DialogHost.CloseDialogCommand&quot;</code>命令关闭对话框 例如</p>
-<p><code>&lt;Button Style=&quot;{StaticResource MaterialDesignFlatButton}&quot; Command=&quot;materialDesign:DialogHost.CloseDialogCommand&quot;&gt;</code></p>
+</ul>
+<p><a href="https://www.cnblogs.com/lelehellow/p/6215499.html" target="_blank" rel="noopener">参考</a></p>
+<h2 id="使用字符串资源"><a href="#使用字符串资源" class="headerlink" title="使用字符串资源"></a>使用字符串资源</h2><ul>
+<li><p>在.CS文件中</p>
+<ul>
+<li>引用<br><code>using System.Resources;</code></li>
+<li>使用<br><code>Properties.Resources.字符串名</code></li>
+</ul>
+</li>
+<li><p>在.xaml文件中</p>
+<ul>
+<li><p>引用</p>
+</li>
+<li><p>使用</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="ContentControl"><a href="#ContentControl" class="headerlink" title="ContentControl"></a>ContentControl</h2><p>  <code>ContentControl</code>是WPF中的数据模板，利用它可以帮助我们动态的变更控件</p>
+<ul>
+<li><p>使用</p>
+<p>- </p>
 </li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://songjf.github.io/2018/08/07/cjkiis7iw0000escfm1y4q2md/" data-id="cjkiis7iw0000escfm1y4q2md" class="article-share-link">分享</a>
+      <a data-url="https://songjf.github.io/2018/08/05/cjlugzglg000tqocfryknh958/" data-id="cjlugzglg000tqocfryknh958" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/WPF/">WPF</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小技巧/">小技巧</a></li></ul>
@@ -144,10 +158,19 @@
     
 <nav id="article-nav">
   
+    <a href="/2018/08/07/cjlugzgkx000iqocfuxtsk1wx/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          MaterialDesign使用心得
+        
+      </div>
+    </a>
   
-    <a href="/2018/08/05/cjkiis7j50002escfn3pjedx1/" id="article-nav-older" class="article-nav-link-wrap">
+  
+    <a href="/2018/08/04/cjlugzggb0000qocfq7j2qpe5/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">下一篇</strong>
-      <div class="article-nav-title">WPF使用字符串资源</div>
+      <div class="article-nav-title">Screen使用笔记</div>
     </a>
   
 </nav>
@@ -196,9 +219,9 @@
     <h2 class="author">SongJF</h2>
     <h3 class="description"></h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>4</strong><br>文章</div></a>
-      <a href="/categories"><div><strong>2</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>3</strong><br>标签</div></a>
+      <a href="/archives"><div><strong>6</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>4</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>4</strong><br>标签</div></a>
     </div>
 
 
