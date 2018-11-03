@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>在WPF中使用Material Design | Song&#39;s Note</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="由于WPF自带样式太过233了，我们希望有更好看的UI框架，所以我们这里采用Material Design这个框架">
+<meta name="keywords" content="WPF">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在WPF中使用Material Design">
+<meta property="og:url" content="https://songjf.github.io/2018/08/03/cjo11rq3h00138gcfx3z24ksm/index.html">
+<meta property="og:site_name" content="Song&#39;s Note">
+<meta property="og:description" content="由于WPF自带样式太过233了，我们希望有更好看的UI框架，所以我们这里采用Material Design这个框架">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-08-05T11:25:21.860Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="在WPF中使用Material Design">
+<meta name="twitter:description" content="由于WPF自带样式太过233了，我们希望有更好看的UI框架，所以我们这里采用Material Design这个框架">
+  
+    <link rel="alternate" href="/atom.xml" title="Song&#39;s Note" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/plugin/bganimation/bg.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <div class="outer">
+        <div class="widget-wrap mobile-header">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <img class="avatar" src="http://pcyxy7tdz.bkt.clouddn.com/avatar.png">
+    <h2 class="author">SongJF</h2>
+    <h3 class="description"></h3>
+    <div class="count-box">
+      <a href="/archives"><div><strong>9</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>6</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>4</strong><br>标签</div></a>
+    </div>
+    <ul class="blog-link">
+     
+          <a href="/" title="Home">
+            <li>主页</li>
+          </a>
+        
+          <a href="/archives" title="Archives">
+            <li>归档</li>
+          </a>
+        
+          <a href="/categories" title="Categories">
+            <li>分类</li>
+          </a>
+        
+          <a href="/tags" title="Tags">
+            <li>标签</li>
+          </a>
+        
+    </ul>
+  </div>
+</div>
+
+        <section id="main"><article id="post-在WPF中使用Material_Design" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/08/03/cjo11rq3h00138gcfx3z24ksm/" class="article-date">
+  <time class="post-time" datetime="2018-08-03T08:13:11.000Z" itemprop="datePublished">
+    <span class="post-month">8月</span><br/>
+    <span class="post-day">03</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      在WPF中使用Material Design
+    </h1>
+  
+
+        <div>
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Windos桌面应用/">Windos桌面应用</a>
+  </div>
+
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>由于WPF自带样式太过233了，我们希望有更好看的UI框架，所以我们这里采用Material Design这个框架</p>
+<a id="more"></a>
+<h2 id="引入包"><a href="#引入包" class="headerlink" title="引入包"></a>引入包</h2><p> 在包管理工具中引入<code>MaterialDesignColors</code>和<code>MaterialDesignThemes</code></p>
+<h2 id="引用主题颜色"><a href="#引用主题颜色" class="headerlink" title="引用主题颜色"></a>引用主题颜色</h2><ul>
+<li><p>在<code>App.xaml</code>中添加引用</p>
+<p> 在<code>&lt;Application.Resources&gt;</code>中添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;ResourceDictionary&gt;</span><br><span class="line">  &lt;ResourceDictionary.MergedDictionaries&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!--设定主題背景色--&gt;</span><br><span class="line">    &lt;ResourceDictionary Source=&quot;pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Dark.xaml&quot; /&gt;</span><br><span class="line">    &lt;!--套用基本控制样式--&gt;</span><br><span class="line">    &lt;ResourceDictionary Source=&quot;pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml&quot; /&gt;</span><br><span class="line">    &lt;!--设定主色--&gt;</span><br><span class="line">    &lt;ResourceDictionary Source=&quot;pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Red.xaml&quot; /&gt;</span><br><span class="line">    &lt;!--设定辅色--&gt;</span><br><span class="line">    &lt;ResourceDictionary Source=&quot;pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Red.xaml&quot; /&gt;</span><br><span class="line"></span><br><span class="line">  &lt;/ResourceDictionary.MergedDictionaries&gt;</span><br><span class="line">&lt;/ResourceDictionary&gt;</span><br></pre></td></tr></table></figure>
+<p>另一种配色方案</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- Material Design --&gt;</span><br><span class="line">&lt;ResourceDictionary Source=&quot;pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Dark.xaml&quot; /&gt;</span><br><span class="line">&lt;ResourceDictionary Source=&quot;pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml&quot; /&gt;</span><br><span class="line">&lt;ResourceDictionary Source=&quot;pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.bluegrey.xaml&quot; /&gt;</span><br><span class="line">&lt;ResourceDictionary Source=&quot;pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.DeepPurPle.xaml&quot; /&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在<code>MainPage.xaml</code>中应用如下更改</p>
+<p>添加 <code>TextElement.Foreground</code> 和 <code>Background</code> 属性的具体内容</p>
+<p>修改后代码如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;Window x:Class=&quot;ENBpresetAssistant.MainWindow&quot;</span><br><span class="line">      xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;</span><br><span class="line">      xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;</span><br><span class="line">      xmlns:d=&quot;http://schemas.microsoft.com/expression/blend/2008&quot;</span><br><span class="line">      xmlns:mc=&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot;</span><br><span class="line">      xmlns:local=&quot;clr-namespace:ENBpresetAssistant&quot;</span><br><span class="line">      TextElement.Foreground=&quot;&#123;DynamicResource MaterialDesignBody&#125;&quot;</span><br><span class="line">      Background=&quot;&#123;DynamicResource MaterialDesignPaper&#125;&quot;</span><br><span class="line">      mc:Ignorable=&quot;d&quot;</span><br><span class="line">      Title=&quot;MainWindow&quot; Height=&quot;450&quot; Width=&quot;800&quot;&gt;</span><br><span class="line">  &lt;Grid&gt;</span><br><span class="line">  &lt;/Grid&gt;</span><br><span class="line">&lt;/Window&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="更改窗体外观"><a href="#更改窗体外观" class="headerlink" title="更改窗体外观"></a>更改窗体外观</h2><ul>
+<li><p>修改<code>APP.xaml</code>中的对应内容</p>
+<ul>
+<li><p>在<code>&lt;ResourceDictionary&gt;</code>添加笔刷资源</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 加入筆刷資源 --&gt;</span><br><span class="line">&lt;SolidColorBrush x:Key=&quot;HighlightBrush&quot; Color=&quot;&#123;DynamicResource Primary700&#125;&quot; /&gt;</span><br><span class="line">&lt;SolidColorBrush x:Key=&quot;AccentColorBrush&quot; Color=&quot;&#123;DynamicResource Primary500&#125;&quot; /&gt;</span><br><span class="line">&lt;SolidColorBrush x:Key=&quot;AccentColorBrush2&quot; Color=&quot;&#123;DynamicResource Primary400&#125;&quot; /&gt;</span><br><span class="line">&lt;SolidColorBrush x:Key=&quot;AccentColorBrush3&quot; Color=&quot;&#123;DynamicResource Primary300&#125;&quot; /&gt;</span><br><span class="line">&lt;SolidColorBrush x:Key=&quot;AccentColorBrush4&quot; Color=&quot;&#123;DynamicResource Primary200&#125;&quot; /&gt;</span><br><span class="line">&lt;SolidColorBrush x:Key=&quot;WindowTitleColorBrush&quot; Color=&quot;&#123;DynamicResource Primary700&#125;&quot; /&gt;</span><br><span class="line">&lt;SolidColorBrush x:Key=&quot;AccentSelectedColorBrush&quot; Color=&quot;&#123;DynamicResource Primary500Foreground&#125;&quot; /&gt;</span><br><span class="line">&lt;LinearGradientBrush x:Key=&quot;ProgressBrush&quot; EndPoint=&quot;0.001,0.5&quot; StartPoint=&quot;1.002,0.5&quot;&gt;</span><br><span class="line">    &lt;GradientStop Color=&quot;&#123;DynamicResource Primary700&#125;&quot; Offset=&quot;0&quot; /&gt;</span><br><span class="line">    &lt;GradientStop Color=&quot;&#123;DynamicResource Primary300&#125;&quot; Offset=&quot;1&quot; /&gt;</span><br><span class="line">&lt;/LinearGradientBrush&gt;</span><br><span class="line">&lt;SolidColorBrush x:Key=&quot;CheckmarkFill&quot; Color=&quot;&#123;DynamicResource Primary500&#125;&quot; /&gt;</span><br><span class="line">&lt;SolidColorBrush x:Key=&quot;RightArrowFill&quot; Color=&quot;&#123;DynamicResource Primary500&#125;&quot; /&gt;</span><br><span class="line">&lt;SolidColorBrush x:Key=&quot;IdealForegroundColorBrush&quot; Color=&quot;&#123;DynamicResource Primary500Foreground&#125;&quot; /&gt;</span><br><span class="line">&lt;SolidColorBrush x:Key=&quot;IdealForegroundDisabledBrush&quot; Color=&quot;&#123;DynamicResource Primary500&#125;&quot; Opacity=&quot;0.4&quot; /&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置 <code>Windos</code> 属性 <code>WindowStyle</code> 为 <code>None</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>参考资料:<a href="&quot;http://ouch1978.github.io/2017/03/25/material-design-xaml-toolkit/&quot;">透過 MATERIAL DESIGN XAML TOOLKIT 讓你的 WPF 應用程式潮又有料</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://songjf.github.io/2018/08/03/cjo11rq3h00138gcfx3z24ksm/" data-id="cjo11rq3h00138gcfx3z24ksm" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/WPF/">WPF</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/08/04/cjo11rq2b000a8gcfhwwhc83a/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          Screen使用笔记
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <h1 class="blog-title">Song&#39;s Note</h1>
+    <h2 class="blog-subtitle">SongJF的人博客</h2>
+    <ul class="blog-link">
+     
+          <a href="/" title="Home">
+            <li>主页</li>
+          </a>
+        
+          <a href="/archives" title="Archives">
+            <li>归档</li>
+          </a>
+        
+          <a href="/categories" title="Categories">
+            <li>分类</li>
+          </a>
+        
+          <a href="/tags" title="Tags">
+            <li>标签</li>
+          </a>
+        
+    </ul>
+  </div>
+</div>
+
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <img class="avatar" src="http://pcyxy7tdz.bkt.clouddn.com/avatar.png">
+    <h2 class="author">SongJF</h2>
+    <h3 class="description"></h3>
+    <div class="count-box">
+      <a href="/archives"><div><strong>9</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>6</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>4</strong><br>标签</div></a>
+    </div>
+
+
+
+    <div class="social-link">
+      
+        <a class="hvr-bounce-in" href="http://github.com/SongJF" target="_blank" title="Github">
+          Github
+        </a>
+      
+    </div>
+
+    <div class="friend-link">
+      <h2>友情链接</h2>
+      
+        <a class="hvr-bounce-in" href="https://github.com/orgs/pfstudio" target="_blank" title="PFStudio">
+          PFStudio
+        </a>
+      
+    </div>
+  </div>
+</div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy;2017 - 2018 SongJF<br>
+      由<a href="http://hexo.io/" target="_blank">Hexo</a>强力驱动 | 
+      主题-<a href="https://github.com/ShanaMaid/hexo-theme-shana">Shana</a>
+      
+    </div>
+    
+  </div>
+</footer>
+    </div>
+    
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="//apps.bdimg.com/libs/wow/0.1.6/wow.min.js"></script>
+<script>
+new WOW().init();
+</script>   
+
+
+  <link rel="stylesheet" href="/plugin/fancybox/jquery.fancybox.css">
+  <script src="/plugin/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+  <section class="hidden-xs"> 
+  <ul class="cb-slideshow"> 
+    <li><span>苟利</span></li> 
+    <li><span>国家</span></li> 
+    <li><span>生死以</span></li> 
+    <li><span>岂能</span></li> 
+    <li><span>祸福</span></li> 
+    <li><span>趋避之</span></li> 
+  </ul>
+</section>
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
