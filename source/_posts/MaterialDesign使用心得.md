@@ -12,7 +12,7 @@ tags:
 
 <!-- more-->
 
-## 双选的Dialog
+## Dialog
 
 - Dialog外套 `<materialDesign:DialogHost HorizontalAlignment="Center" VerticalAlignment="Center" DialogClosing="DialogHost_DialogClosing"/>`
 
@@ -45,3 +45,37 @@ tags:
   通过为控件添加`Command="materialDesign:DialogHost.CloseDialogCommand"`命令关闭对话框 例如
   
   `<Button Style="{StaticResource MaterialDesignFlatButton}" Command="materialDesign:DialogHost.CloseDialogCommand">`
+
+## DrawerHost
+
+  也就是侧(顶/底)边栏
+
+- 使用
+
+  ``` xaml
+  <materialDesign:DrawerHost>
+    <!--设置左侧边栏-->
+    <materialDesign:DrawerHost.LeftDrawerContent>
+        <DockPanel>
+            <!--填充内容-->
+        </DockPanel>
+    </materialDesign:DrawerHost.LeftDrawerContent>
+    <!--填充其他内容-->
+  </materialDesign:DrawerHost>
+  ```
+
+  - 展开方式
+
+    采用与展开按钮进行数据绑定
+
+    按钮
+    ``` xaml
+    <ToggleButton Style="{StaticResource MaterialDesignHamburgerToggleButton}" IsChecked="False" x:Name="MenuToggleButton"/>
+    ```
+
+    然后在`DrawerHost`里绑定
+
+    ``` xaml
+    <materialDesign:DrawerHost IsLeftDrawerOpen="{Binding ElementName=MenuToggleButton, Path=IsChecked}">
+    ```
+
