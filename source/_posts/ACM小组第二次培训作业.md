@@ -145,7 +145,65 @@ int main()
 
 ## [1005](http://acm.hdu.edu.cn/diy/diy_previewproblem.php?cid=34364&pid=1005)
 ```c
+#include<stdio.h>
+#include<math.h> 
+#include<string.h>
+using namespace std;
+//对浮点数二分逼近时需要 
+#define def 1e-10
 
+//公共变量在前面声明 
+int n,k;
+double num[10005]; 
+
+//判断按照此方案切绳子是否符合要求 
+bool isOK(double mid)
+{
+	int count=0;
+	//对每段绳子进行切割 
+	for(int i=0;i<n;i++)
+    {
+        count+=(int)(num[i]/mid);
+    }
+    //总数达标即返回真 
+	if(count>=k) return true;
+	else return false;
+}
+
+double findmid(double start,double end)
+{
+	double mid;
+	//设定二分退出条件 
+	while(fabs(start-end)>def)
+	{
+		mid=(start+end)/2;
+		
+		//用二分减少需要判定方案是否合法的次数 
+		if(isOK(mid)) start=mid;
+		else end=mid;
+	} 
+	return mid;
+}
+
+int main()
+{
+	while(scanf("%d%d",&n,&k)!=EOF)
+	{
+		if(n==0&&k==0) break;
+		//对数组置零 
+		memset(num,0,sizeof(num));
+		double sum=0;
+		//读入数据 
+		for(int i=0;i<n;i++)
+		{
+			scanf("%lf",&num[i]);
+			sum+=num[i];
+		} 
+		
+		printf("%.2f\n",findmid(0,sum/k));
+	}
+	return 0;
+} 
 ```
 
 ## [1006](http://acm.hdu.edu.cn/diy/diy_previewproblem.php?cid=34364&pid=1006)
