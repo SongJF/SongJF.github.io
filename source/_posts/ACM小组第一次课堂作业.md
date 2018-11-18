@@ -2,7 +2,7 @@
 title: ACM小组第一次课堂作业
 author: SongJF
 date: 2018-11-11 19:39:12
-categories:
+categories: ACM小组培训
 tags:
 ---
 

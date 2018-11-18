@@ -1,5 +1,5 @@
 ---
-title: ACM小组第一次培训
+title: ACM小组第一次培训作业
 author: SongJF
 date: 2018-11-03 13:41:54
 categories: ACM小组培训
