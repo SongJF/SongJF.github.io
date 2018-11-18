@@ -70,7 +70,7 @@ links:
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
 # 头像
-avatar: http://file.songjf.top/note/avatar.jpg
+avatar: http://file.songjf.top/note/avatar
 
 
 # 网站统计
