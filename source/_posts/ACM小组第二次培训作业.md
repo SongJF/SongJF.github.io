@@ -6,7 +6,10 @@ categories: ACM小组培训
 tags:
 ---
 
-## [1001](http://acm.hdu.edu.cn/diy/diy_previewproblem.php?cid=34364&pid=1001)
+<!-- TOC -->
+
+## 1001
+[前往问题](http://acm.hdu.edu.cn/diy/diy_previewproblem.php?cid=34364&pid=1001)
 ```c
 #include<stdio.h>
 #include<algorithm>
@@ -36,7 +39,8 @@ int main()
 } 
 ```
 
-## [1002](http://acm.hdu.edu.cn/diy/diy_previewproblem.php?cid=34364&pid=1002)
+## 1002
+[前往问题](http://acm.hdu.edu.cn/diy/diy_previewproblem.php?cid=34364&pid=1002)
 ```c
 
 #include<stdio.h>
@@ -68,7 +72,8 @@ int main()
 } 
 ```
 
-## [1003](http://acm.hdu.edu.cn/diy/diy_previewproblem.php?cid=34364&pid=1003)
+## 1003
+[前往问题](http://acm.hdu.edu.cn/diy/diy_previewproblem.php?cid=34364&pid=1003)
 ```c
 #include<stdio.h>
 #include<math.h>
@@ -103,7 +108,8 @@ int main()
 }
 ```
 
-## [1004](http://acm.hdu.edu.cn/diy/diy_previewproblem.php?cid=34364&pid=1004)
+## 1004
+[前往问题](http://acm.hdu.edu.cn/diy/diy_previewproblem.php?cid=34364&pid=1004)
 ```c
 #include<stdio.h>
 #include<algorithm>
@@ -143,7 +149,8 @@ int main()
 }
 ```
 
-## [1005](http://acm.hdu.edu.cn/diy/diy_previewproblem.php?cid=34364&pid=1005)
+## 1005
+[前往问题](http://acm.hdu.edu.cn/diy/diy_previewproblem.php?cid=34364&pid=1005)
 ```c
 #include<stdio.h>
 #include<math.h> 
@@ -206,7 +213,8 @@ int main()
 } 
 ```
 
-## [1006](http://acm.hdu.edu.cn/diy/diy_previewproblem.php?cid=34364&pid=1006)
+## 1006
+[前往问题](http://acm.hdu.edu.cn/diy/diy_previewproblem.php?cid=34364&pid=1006)
 ```c
 #include<stdio.h>
 #include<algorithm>
