@@ -2,7 +2,7 @@
 title: docker小技巧
 author: SongJF
 date: 2018-12-19 19:23:27
-categories: - 后端
+categories:  后端
 tags:
     - docker
     - 小技巧

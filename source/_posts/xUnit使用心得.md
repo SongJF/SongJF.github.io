@@ -40,6 +40,3 @@ public XXXX()
     _qiniuConfig = _serviceProvider.GetService<IOptions<QiniuConfig>>();
 }
 ```
-
-## 在xUnit中使用MemeryDb
-
