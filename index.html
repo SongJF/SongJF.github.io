@@ -38,9 +38,9 @@
     <h2 class="author">SongJF</h2>
     <h3 class="description"></h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>11</strong><br>文章</div></a>
-      <a href="/categories"><div><strong>5</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>3</strong><br>标签</div></a>
+      <a href="/archives"><div><strong>12</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>6</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>7</strong><br>标签</div></a>
     </div>
     <ul class="blog-link">
      
@@ -68,7 +68,7 @@
   
     <article id="post-ACM小组期中考试" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/12/02/cjp6o9y3y0001u8cf10oikkqt/" class="article-date">
+    <a href="/2018/12/02/cjpv505rg00027scfhtw15s7w/" class="article-date">
   <time class="post-time" datetime="2018-12-02T07:35:36.000Z" itemprop="datePublished">
     <span class="post-month">12月</span><br/>
     <span class="post-day">02</span>
@@ -83,7 +83,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/02/cjp6o9y3y0001u8cf10oikkqt/">ACM小组期中考试</a>
+      <a class="article-title" href="/2018/12/02/cjpv505rg00027scfhtw15s7w/">ACM小组期中考试</a>
     </h1>
   
 
@@ -106,13 +106,13 @@
 <!-- TOC -->autoauto- <a href="#1001">1001</a>auto- <a href="#1002">1002</a>auto- <a href="#1003">1003</a>auto- <a href="#1004">1004</a>auto- <a href="#1005">1005</a>auto- <a href="#1006">1006</a>auto- <a href="#1007">1007</a>autoauto<!-- /TOC -->
         
           <p class="article-more-link">
-            <a href="/2018/12/02/cjp6o9y3y0001u8cf10oikkqt/#more">Read More</a>
+            <a href="/2018/12/02/cjpv505rg00027scfhtw15s7w/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://note.songjf.top/2018/12/02/cjp6o9y3y0001u8cf10oikkqt/" data-id="cjp6o9y3y0001u8cf10oikkqt" class="article-share-link">分享</a>
+      <a data-url="https://note.songjf.top/2018/12/02/cjpv505rg00027scfhtw15s7w/" data-id="cjpv505rg00027scfhtw15s7w" class="article-share-link">分享</a>
       
       
     </footer>
@@ -124,9 +124,65 @@
 
 
   
+    <article id="post-xUnit使用心得" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/22/cjpv505st000k7scfjetg2cj4/" class="article-date">
+  <time class="post-time" datetime="2018-11-22T11:20:54.000Z" itemprop="datePublished">
+    <span class="post-month">11月</span><br/>
+    <span class="post-day">22</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/22/cjpv505st000k7scfjetg2cj4/">xUnit使用心得</a>
+    </h1>
+  
+
+        <div>
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/NET-Core-开发/">.NET Core 开发</a>
+  </div>
+
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="在xUnit中使用DI-依赖注入-读取App配置"><a href="#在xUnit中使用DI-依赖注入-读取App配置" class="headerlink" title="在xUnit中使用DI(依赖注入)读取App配置"></a>在xUnit中使用DI(依赖注入)读取App配置</h2><p>以读取<code>appsettings.json</code>内的<code>QiniuConfig</code>为示例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">private readonly IConfigurationRoot _configuration;</span><br><span class="line">private readonly IServiceProvider _serviceProvider;</span><br><span class="line"></span><br><span class="line">private readonly IOptions&lt;QiniuConfig&gt; _qiniuConfig;</span><br><span class="line"></span><br><span class="line">//构造函数</span><br><span class="line">public XXXX() </span><br><span class="line">&#123;</span><br><span class="line">    // 读取Config</span><br><span class="line">    var configBuilder = new ConfigurationBuilder()</span><br><span class="line">        .AddJsonFile(&quot;appsettings.json&quot;, optional: true, reloadOnChange: true)</span><br><span class="line">        .AddEnvironmentVariables();</span><br><span class="line">    _configuration = configBuilder.Build();</span><br><span class="line"></span><br><span class="line">    //配置DI</span><br><span class="line">    var services = new ServiceCollection();</span><br><span class="line">    services.AddOptions();</span><br><span class="line"></span><br><span class="line">    services.Configure&lt;QiniuConfig&gt;(_configuration.GetSection(&quot;QiniuConfig&quot;));</span><br><span class="line">    _serviceProvider = services.BuildServiceProvider();</span><br><span class="line"></span><br><span class="line">    //获取配置</span><br><span class="line">    _qiniuConfig = _serviceProvider.GetService&lt;IOptions&lt;QiniuConfig&gt;&gt;();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="在xUnit中使用MemeryDb"><a href="#在xUnit中使用MemeryDb" class="headerlink" title="在xUnit中使用MemeryDb"></a>在xUnit中使用MemeryDb</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://note.songjf.top/2018/11/22/cjpv505st000k7scfjetg2cj4/" data-id="cjpv505st000k7scfjetg2cj4" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/xUnit/">xUnit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/单元测试/">单元测试</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/测试/">测试</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
     <article id="post-ACM小组第二次培训作业" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/11/17/cjp6o9y440003u8cfgvy0asja/" class="article-date">
+    <a href="/2018/11/17/cjpv505rq00067scfauhb2v3f/" class="article-date">
   <time class="post-time" datetime="2018-11-17T13:19:30.000Z" itemprop="datePublished">
     <span class="post-month">11月</span><br/>
     <span class="post-day">17</span>
@@ -141,7 +197,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/17/cjp6o9y440003u8cfgvy0asja/">ACM小组第二次培训作业</a>
+      <a class="article-title" href="/2018/11/17/cjpv505rq00067scfauhb2v3f/">ACM小组第二次培训作业</a>
     </h1>
   
 
@@ -171,7 +227,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://note.songjf.top/2018/11/17/cjp6o9y440003u8cfgvy0asja/" data-id="cjp6o9y440003u8cfgvy0asja" class="article-share-link">分享</a>
+      <a data-url="https://note.songjf.top/2018/11/17/cjpv505rq00067scfauhb2v3f/" data-id="cjpv505rq00067scfauhb2v3f" class="article-share-link">分享</a>
       
       
     </footer>
@@ -185,7 +241,7 @@
   
     <article id="post-ACM小组第一次课堂作业" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/11/11/cjp6o9y460004u8cfi5yzqrov/" class="article-date">
+    <a href="/2018/11/11/cjpv505ro00057scfgpcco2e0/" class="article-date">
   <time class="post-time" datetime="2018-11-11T11:39:12.000Z" itemprop="datePublished">
     <span class="post-month">11月</span><br/>
     <span class="post-day">11</span>
@@ -200,7 +256,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/11/cjp6o9y460004u8cfi5yzqrov/">ACM小组第一次课堂作业</a>
+      <a class="article-title" href="/2018/11/11/cjpv505ro00057scfgpcco2e0/">ACM小组第一次课堂作业</a>
     </h1>
   
 
@@ -224,7 +280,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://note.songjf.top/2018/11/11/cjp6o9y460004u8cfi5yzqrov/" data-id="cjp6o9y460004u8cfi5yzqrov" class="article-share-link">分享</a>
+      <a data-url="https://note.songjf.top/2018/11/11/cjpv505ro00057scfgpcco2e0/" data-id="cjpv505ro00057scfgpcco2e0" class="article-share-link">分享</a>
       
       
     </footer>
@@ -238,7 +294,7 @@
   
     <article id="post-ACM小组第一次培训" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/11/03/cjp6o9y3r0000u8cf53tlrm93/" class="article-date">
+    <a href="/2018/11/03/cjpv505r700007scfeqaath71/" class="article-date">
   <time class="post-time" datetime="2018-11-03T05:41:54.000Z" itemprop="datePublished">
     <span class="post-month">11月</span><br/>
     <span class="post-day">03</span>
@@ -253,7 +309,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/03/cjp6o9y3r0000u8cf53tlrm93/">ACM小组第一次培训作业</a>
+      <a class="article-title" href="/2018/11/03/cjpv505r700007scfeqaath71/">ACM小组第一次培训作业</a>
     </h1>
   
 
@@ -285,13 +341,13 @@
 <!-- /TOC -->
         
           <p class="article-more-link">
-            <a href="/2018/11/03/cjp6o9y3r0000u8cf53tlrm93/#more">Read More</a>
+            <a href="/2018/11/03/cjpv505r700007scfeqaath71/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://note.songjf.top/2018/11/03/cjp6o9y3r0000u8cf53tlrm93/" data-id="cjp6o9y3r0000u8cf53tlrm93" class="article-share-link">分享</a>
+      <a data-url="https://note.songjf.top/2018/11/03/cjpv505r700007scfeqaath71/" data-id="cjpv505r700007scfeqaath71" class="article-share-link">分享</a>
       
       
     </footer>
@@ -305,7 +361,7 @@
   
     <article id="post-pm2小技巧" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/10/17/cjp6o9y4a0007u8cfrk80xhzr/" class="article-date">
+    <a href="/2018/10/17/cjpv505sz000q7scfyiiqwmn3/" class="article-date">
   <time class="post-time" datetime="2018-10-17T01:53:43.000Z" itemprop="datePublished">
     <span class="post-month">10月</span><br/>
     <span class="post-day">17</span>
@@ -320,7 +376,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/17/cjp6o9y4a0007u8cfrk80xhzr/">pm2小技巧</a>
+      <a class="article-title" href="/2018/10/17/cjpv505sz000q7scfyiiqwmn3/">pm2小技巧</a>
     </h1>
   
 
@@ -347,7 +403,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://note.songjf.top/2018/10/17/cjp6o9y4a0007u8cfrk80xhzr/" data-id="cjp6o9y4a0007u8cfrk80xhzr" class="article-share-link">分享</a>
+      <a data-url="https://note.songjf.top/2018/10/17/cjpv505sz000q7scfyiiqwmn3/" data-id="cjpv505sz000q7scfyiiqwmn3" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小技巧/">小技巧</a></li></ul>
@@ -363,7 +419,7 @@
   
     <article id="post-矩阵运算规则" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/10/07/cjp6o9y5a000pu8cfr27gs22x/" class="article-date">
+    <a href="/2018/10/07/cjpv505sv000m7scfxgt7ek2q/" class="article-date">
   <time class="post-time" datetime="2018-10-07T05:46:51.000Z" itemprop="datePublished">
     <span class="post-month">10月</span><br/>
     <span class="post-day">07</span>
@@ -378,7 +434,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/07/cjp6o9y5a000pu8cfr27gs22x/">矩阵运算规则</a>
+      <a class="article-title" href="/2018/10/07/cjpv505sv000m7scfxgt7ek2q/">矩阵运算规则</a>
     </h1>
   
 
@@ -400,13 +456,13 @@
         <p>量子力学也要到线性代数233(无奈)</p>
         
           <p class="article-more-link">
-            <a href="/2018/10/07/cjp6o9y5a000pu8cfr27gs22x/#more">Read More</a>
+            <a href="/2018/10/07/cjpv505sv000m7scfxgt7ek2q/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://note.songjf.top/2018/10/07/cjp6o9y5a000pu8cfr27gs22x/" data-id="cjp6o9y5a000pu8cfr27gs22x" class="article-share-link">分享</a>
+      <a data-url="https://note.songjf.top/2018/10/07/cjpv505sv000m7scfxgt7ek2q/" data-id="cjpv505sv000m7scfxgt7ek2q" class="article-share-link">分享</a>
       
       
     </footer>
@@ -420,7 +476,7 @@
   
     <article id="post-git小技巧" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/08/07/cjp6o9y470005u8cfv5wayxbb/" class="article-date">
+    <a href="/2018/08/07/cjpv505sc000e7scf6uhg9c7x/" class="article-date">
   <time class="post-time" datetime="2018-08-07T08:24:39.000Z" itemprop="datePublished">
     <span class="post-month">8月</span><br/>
     <span class="post-day">07</span>
@@ -435,7 +491,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/07/cjp6o9y470005u8cfv5wayxbb/">git小技巧</a>
+      <a class="article-title" href="/2018/08/07/cjpv505sc000e7scf6uhg9c7x/">git小技巧</a>
     </h1>
   
 
@@ -462,13 +518,13 @@
 </ul>
         
           <p class="article-more-link">
-            <a href="/2018/08/07/cjp6o9y470005u8cfv5wayxbb/#more">Read More</a>
+            <a href="/2018/08/07/cjpv505sc000e7scf6uhg9c7x/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://note.songjf.top/2018/08/07/cjp6o9y470005u8cfv5wayxbb/" data-id="cjp6o9y470005u8cfv5wayxbb" class="article-share-link">分享</a>
+      <a data-url="https://note.songjf.top/2018/08/07/cjpv505sc000e7scf6uhg9c7x/" data-id="cjpv505sc000e7scf6uhg9c7x" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小技巧/">小技巧</a></li></ul>
@@ -484,7 +540,7 @@
   
     <article id="post-MaterialDesign使用心得" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/08/07/cjp6o9y53000lu8cf8ozy7y1o/" class="article-date">
+    <a href="/2018/08/07/cjpv505rv00077scfp9mhb6yb/" class="article-date">
   <time class="post-time" datetime="2018-08-06T16:28:21.000Z" itemprop="datePublished">
     <span class="post-month">8月</span><br/>
     <span class="post-day">07</span>
@@ -499,7 +555,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/07/cjp6o9y53000lu8cf8ozy7y1o/">MaterialDesign使用心得</a>
+      <a class="article-title" href="/2018/08/07/cjpv505rv00077scfp9mhb6yb/">MaterialDesign使用心得</a>
     </h1>
   
 
@@ -521,13 +577,13 @@
         <p>由于<code>MaterialDesign</code>的丰富特性，加之其并没有多少中文说明文档，所以我只好摸着官方Demo一步一步慢慢踩坑了…</p>
         
           <p class="article-more-link">
-            <a href="/2018/08/07/cjp6o9y53000lu8cf8ozy7y1o/#more">Read More</a>
+            <a href="/2018/08/07/cjpv505rv00077scfp9mhb6yb/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://note.songjf.top/2018/08/07/cjp6o9y53000lu8cf8ozy7y1o/" data-id="cjp6o9y53000lu8cf8ozy7y1o" class="article-share-link">分享</a>
+      <a data-url="https://note.songjf.top/2018/08/07/cjpv505rv00077scfp9mhb6yb/" data-id="cjpv505rv00077scfp9mhb6yb" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/WPF/">WPF</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小技巧/">小技巧</a></li></ul>
@@ -543,7 +599,7 @@
   
     <article id="post-WPF小技巧" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/08/05/cjp6o9y600011u8cfjggr2vts/" class="article-date">
+    <a href="/2018/08/05/cjpv505s6000b7scfw07azs8x/" class="article-date">
   <time class="post-time" datetime="2018-08-05T05:24:43.000Z" itemprop="datePublished">
     <span class="post-month">8月</span><br/>
     <span class="post-day">05</span>
@@ -558,7 +614,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/05/cjp6o9y600011u8cfjggr2vts/">WPF小技巧</a>
+      <a class="article-title" href="/2018/08/05/cjpv505s6000b7scfw07azs8x/">WPF小技巧</a>
     </h1>
   
 
@@ -619,70 +675,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://note.songjf.top/2018/08/05/cjp6o9y600011u8cfjggr2vts/" data-id="cjp6o9y600011u8cfjggr2vts" class="article-share-link">分享</a>
+      <a data-url="https://note.songjf.top/2018/08/05/cjpv505s6000b7scfw07azs8x/" data-id="cjpv505s6000b7scfw07azs8x" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/WPF/">WPF</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小技巧/">小技巧</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
-    <article id="post-Screen使用笔记" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/08/04/cjp6o9y50000ju8cfgo6s7uby/" class="article-date">
-  <time class="post-time" datetime="2018-08-04T11:07:22.000Z" itemprop="datePublished">
-    <span class="post-month">8月</span><br/>
-    <span class="post-day">04</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/04/cjp6o9y50000ju8cfgo6s7uby/">Screen使用笔记</a>
-    </h1>
-  
-
-        <div>
-          
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Linux技巧/">Linux技巧</a>
-  </div>
-
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="新建session"><a href="#新建session" class="headerlink" title="新建session"></a>新建session</h2><p>—&gt;screen -S &lt;Session名称&gt;</p>
-<h2 id="展示所有session"><a href="#展示所有session" class="headerlink" title="展示所有session"></a>展示所有session</h2><p>—&gt;screen -ls</p>
-<h2 id="重连session"><a href="#重连session" class="headerlink" title="重连session"></a>重连session</h2><p>—&gt;screen -r &lt;Session名称&gt;(或ID)</p>
-<h2 id="从session中断连"><a href="#从session中断连" class="headerlink" title="从session中断连"></a>从session中断连</h2><p>—&gt;C-a d  (C-a即ctrl+a)</p>
-<h2 id="释放某个session（杀死）"><a href="#释放某个session（杀死）" class="headerlink" title="释放某个session（杀死）"></a>释放某个session（杀死）</h2><p>—&gt;ctrl+d（在此session中）</p>
-<p>—&gt;screen -X -S test quit（在主session中）</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://note.songjf.top/2018/08/04/cjp6o9y50000ju8cfgo6s7uby/" data-id="cjp6o9y50000ju8cfgo6s7uby" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小技巧/">小技巧</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
 
     </footer>
   </div>
@@ -737,9 +733,9 @@
     <h2 class="author">SongJF</h2>
     <h3 class="description"></h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>11</strong><br>文章</div></a>
-      <a href="/categories"><div><strong>5</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>3</strong><br>标签</div></a>
+      <a href="/archives"><div><strong>12</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>6</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>7</strong><br>标签</div></a>
     </div>
 
 
