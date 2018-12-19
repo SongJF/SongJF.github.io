@@ -38,9 +38,9 @@
     <h2 class="author">SongJF</h2>
     <h3 class="description"></h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>12</strong><br>文章</div></a>
-      <a href="/categories"><div><strong>6</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>7</strong><br>标签</div></a>
+      <a href="/archives"><div><strong>13</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>7</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>8</strong><br>标签</div></a>
     </div>
     <ul class="blog-link">
      
@@ -65,6 +65,98 @@
 </div>
 
         <section id="main">
+  
+    <article id="post-WPF小技巧" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/08/05/cjpv505s6000b7scfw07azs8x/" class="article-date">
+  <time class="post-time" datetime="2018-08-05T05:24:43.000Z" itemprop="datePublished">
+    <span class="post-month">8月</span><br/>
+    <span class="post-day">05</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/05/cjpv505s6000b7scfw07azs8x/">WPF小技巧</a>
+    </h1>
+  
+
+        <div>
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Windos桌面应用/">Windos桌面应用</a>
+  </div>
+
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="使用数据绑定"><a href="#使用数据绑定" class="headerlink" title="使用数据绑定"></a>使用数据绑定</h2><ul>
+<li><p>理解</p>
+<p>数据绑定就是把两个元素、对象等的某个属性连接在一起，一变俱变，保持同步</p>
+</li>
+<li><p>使用 将文本框的内容绑定至滑动条上</p>
+<ul>
+<li><p>xaml</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;TextBox Height=&quot;20&quot; Margin=&quot;0,0,10,87&quot; Text=&quot;&#123;Binding ElementName=slider1,Path=Value&#125;&quot; BorderThickness=&quot;1&quot;/&gt;</span><br><span class="line">&lt;Slider Maximum=&quot;100&quot; Margin=&quot;0,50,0,35&quot; Name=&quot;slider1&quot;/&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>cs</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.textbox1.SetBinding(TextBox.TextProperty, <span class="keyword">new</span> Binding(<span class="string">"Value"</span>) &#123; ElementName = slider1.Name,Mode=BindingMode.TwoWay&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://www.cnblogs.com/lelehellow/p/6215499.html" target="_blank" rel="noopener">参考</a></p>
+<h2 id="使用字符串资源"><a href="#使用字符串资源" class="headerlink" title="使用字符串资源"></a>使用字符串资源</h2><ul>
+<li><p>在.CS文件中</p>
+<ul>
+<li>引用<br><code>using System.Resources;</code></li>
+<li>使用<br><code>Properties.Resources.字符串名</code></li>
+</ul>
+</li>
+<li><p>在.xaml文件中</p>
+<ul>
+<li><p>引用</p>
+</li>
+<li><p>使用</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="ContentControl"><a href="#ContentControl" class="headerlink" title="ContentControl"></a>ContentControl</h2><p>  <code>ContentControl</code>是WPF中的数据模板，利用它可以帮助我们动态的变更控件</p>
+<ul>
+<li><p>使用</p>
+<p>- </p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://note.songjf.top/2018/08/05/cjpv505s6000b7scfw07azs8x/" data-id="cjpv505s6000b7scfw07azs8x" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/WPF/">WPF</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小技巧/">小技巧</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
   
     <article id="post-Screen使用笔记" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -229,9 +321,9 @@
     <h2 class="author">SongJF</h2>
     <h3 class="description"></h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>12</strong><br>文章</div></a>
-      <a href="/categories"><div><strong>6</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>7</strong><br>标签</div></a>
+      <a href="/archives"><div><strong>13</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>7</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>8</strong><br>标签</div></a>
     </div>
 
 

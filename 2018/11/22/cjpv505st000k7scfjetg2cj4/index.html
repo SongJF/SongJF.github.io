@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="Song&#39;s Note">
 <meta property="og:description" content="在xUnit中使用DI(依赖注入)读取App配置以读取appsettings.json内的QiniuConfig为示例 123456789101112131415161718192021222324private readonly IConfigurationRoot _configuration;private readonly IServiceProvider _serviceProvider">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-02T09:27:48.580Z">
+<meta property="og:updated_time" content="2018-12-19T12:12:52.556Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="xUnit使用心得">
 <meta name="twitter:description" content="在xUnit中使用DI(依赖注入)读取App配置以读取appsettings.json内的QiniuConfig为示例 123456789101112131415161718192021222324private readonly IConfigurationRoot _configuration;private readonly IServiceProvider _serviceProvider">
@@ -43,9 +43,9 @@
     <h2 class="author">SongJF</h2>
     <h3 class="description"></h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>12</strong><br>文章</div></a>
-      <a href="/categories"><div><strong>6</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>7</strong><br>标签</div></a>
+      <a href="/archives"><div><strong>13</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>7</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>8</strong><br>标签</div></a>
     </div>
     <ul class="blog-link">
      
@@ -107,7 +107,6 @@
       
         <h2 id="在xUnit中使用DI-依赖注入-读取App配置"><a href="#在xUnit中使用DI-依赖注入-读取App配置" class="headerlink" title="在xUnit中使用DI(依赖注入)读取App配置"></a>在xUnit中使用DI(依赖注入)读取App配置</h2><p>以读取<code>appsettings.json</code>内的<code>QiniuConfig</code>为示例</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">private readonly IConfigurationRoot _configuration;</span><br><span class="line">private readonly IServiceProvider _serviceProvider;</span><br><span class="line"></span><br><span class="line">private readonly IOptions&lt;QiniuConfig&gt; _qiniuConfig;</span><br><span class="line"></span><br><span class="line">//构造函数</span><br><span class="line">public XXXX() </span><br><span class="line">&#123;</span><br><span class="line">    // 读取Config</span><br><span class="line">    var configBuilder = new ConfigurationBuilder()</span><br><span class="line">        .AddJsonFile(&quot;appsettings.json&quot;, optional: true, reloadOnChange: true)</span><br><span class="line">        .AddEnvironmentVariables();</span><br><span class="line">    _configuration = configBuilder.Build();</span><br><span class="line"></span><br><span class="line">    //配置DI</span><br><span class="line">    var services = new ServiceCollection();</span><br><span class="line">    services.AddOptions();</span><br><span class="line"></span><br><span class="line">    services.Configure&lt;QiniuConfig&gt;(_configuration.GetSection(&quot;QiniuConfig&quot;));</span><br><span class="line">    _serviceProvider = services.BuildServiceProvider();</span><br><span class="line"></span><br><span class="line">    //获取配置</span><br><span class="line">    _qiniuConfig = _serviceProvider.GetService&lt;IOptions&lt;QiniuConfig&gt;&gt;();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="在xUnit中使用MemeryDb"><a href="#在xUnit中使用MemeryDb" class="headerlink" title="在xUnit中使用MemeryDb"></a>在xUnit中使用MemeryDb</h2>
       
     </div>
     <footer class="article-footer">
@@ -183,9 +182,9 @@
     <h2 class="author">SongJF</h2>
     <h3 class="description"></h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>12</strong><br>文章</div></a>
-      <a href="/categories"><div><strong>6</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>7</strong><br>标签</div></a>
+      <a href="/archives"><div><strong>13</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>7</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>8</strong><br>标签</div></a>
     </div>
 
 
