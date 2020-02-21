@@ -7,11 +7,15 @@ tags: 小技巧
 ---
 
 
-## 切换分支
+## 连接远程分支
 
 - git remote add origin [url] 添加新的远程仓库
 
 - git push origin [branch] 本地推到远程分支
+
+- git remote update origin 更新远程分支信息
+
+- git push --set-upstream origin [branch] 将当前分支与远程分支链接
 
 <!-- more-->
 
@@ -19,7 +23,7 @@ tags: 小技巧
 
 - git branch -d [branch] 删除本地分支
 
-- git remote rm origin 删除远程分支
+- git remote rm origin 删除远程仓库
 
 # 分支合并
 
